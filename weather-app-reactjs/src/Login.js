@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import "./App.css";
-import "./weather/App.js"
 
 function App() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
-
+  const navigate = useNavigate();
   // User Login info
   const database = [
     {
@@ -75,7 +74,7 @@ function App() {
     <div className="app">
       <div className="login-form">
         <div className="title">Weather App Login</div>
-        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+        {isSubmitted ? navigate("./weather") : renderForm}
       </div>
     </div>
   );

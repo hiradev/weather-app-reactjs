@@ -1,16 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from './App';
-import { AuthProvider } from './auth/AuthProvider';
+import Weather from "./weather";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AuthProvider>
-      <App />
-    </AuthProvider>
+    <BrowserRouter>
+    <Routes>
+      <Route index element={<App />} />
+      <Route path="weather" element={<Weather />} />
+    </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
