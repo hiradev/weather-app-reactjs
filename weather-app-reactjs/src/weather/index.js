@@ -2,6 +2,7 @@ import "./index.css";
 import Grid from '@react-css/grid';
 import Search from './Search';
 import Colombo from './Colombo';
+import Forecast from './Forecast';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
                 <Search />
             </Grid.Item>
             <Grid.Item>
-                Bye
+              <Forecast />
             </Grid.Item>
         </Grid>
       </header>

@@ -12,8 +12,9 @@
 
 input[type="text"],
 input[type="password"] {
-  height: 25px;
+  height: 50px;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #6cf0c2;
 }
 
 input[type="submit"] {
@@ -54,6 +55,8 @@ input[type="submit"]:hover {
 .title {
   font-size: 25px;
   margin-bottom: 20px;
+  color: black;
+  font-weight: bold;
 }
 
 .input-container {
@@ -61,4 +64,5 @@ input[type="submit"]:hover {
   flex-direction: column;
   gap: 8px;
   margin: 10px;
+  color: black;
 }
